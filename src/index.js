@@ -49,6 +49,15 @@ class MessageArea extends React.Component {
         p.setAttribute("id", idNumberString);
         
         
+
+
+        //creating button with specific ids
+        //let p = document.createElement("p");
+        //p.innerHTML = submittedText;
+        //p.setAttribute("id", idNumberString);
+        //let button = document.createElement("button");
+        //button.innerHTML = "X";
+        
         //appending li to div
         //document.getElementById("textArea").appendChild(li);
 
@@ -57,6 +66,10 @@ class MessageArea extends React.Component {
 
         //adding p to the div id="textArea"
         document.getElementById("textArea").appendChild(p);
+
+        
+        //adding button to the end of the p tag
+        //document.getElementById("textArea").appendChild(button);
 
         //remove all li tags
         /*
@@ -88,7 +101,11 @@ class MessageArea extends React.Component {
            if(e.target === p) {
 
                 let child = document.getElementById(idNumberString);
-                child.innerHTML = "";
+                let confirmation = window.confirm("Are you sure you want to remove item?");
+               if (confirmation === true) {
+                   child.innerHTML = "";    
+                } 
+                
                //console.log("removed");
             //console.log("p was removed"); 
             
@@ -116,8 +133,6 @@ class MessageArea extends React.Component {
     
 
     render(props){
-
-        
 
         return (
             <div>
@@ -160,6 +175,9 @@ ReactDOM.render(
     document.getElementById("listArea")
 );
 //NEXT// 
-// Add buttons at the end of the list item,and add functionality 
-//so that it asks "are you sure you wanna exit
-//progress half done
+// Add buttons at the end of the list item,and add functionality (?)
+// add css and boostrap
+
+
+//progres//
+// added confirmation
